@@ -40,13 +40,20 @@ class Program
 
 
         //FOR LOOPS
-        for(int i = 100000; i > -100000; i-=10000)
-        {
-            Console.WriteLine(i);
-        }
+        // for(int i = 100000; i > -100000; i-=10000)
+        // {
+        //     Console.WriteLine(i);
+        // }
 
         //LISTS LIST<int> = NEW LIST<INT>()
+        List<string> myFriends = new List<string> {"Bob", "Betty", "Bubba"};
 
+        myFriends.Add("Doug");
+
+        foreach(string friend in myFriends)
+        {
+            Console.WriteLine(friend);
+        }
 
         //FUNCTIONS
     }
