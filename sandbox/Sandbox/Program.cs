@@ -31,16 +31,19 @@ class Program
         // }
 
         // DO WHILE
-        bool done;
-        do
-        {
-            Console.Write("Are we done (y/n)? ");
-            done = Console.ReadLine() == "y";
-        } while (! done);
+        // bool done;
+        // do
+        // {
+        //     Console.Write("Are we done (y/n)? ");
+        //     done = Console.ReadLine().ToLower() == "y"; //.ToLower allows it to work wheather y is capitalized or not (y, Y)
+        // } while (! done);
 
 
         //FOR LOOPS
-
+        for(int i = 0; i < 10; i++)
+        {
+            Console.WriteLine(i);
+        }
 
         //LISTS LIST<int> = NEW LIST<INT>()
 
