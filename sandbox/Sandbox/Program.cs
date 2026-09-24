@@ -23,12 +23,21 @@ class Program
         // }
         
         // WHILE LOOPS
-        bool done = false;
-        while (! done)
+        // bool done = false;
+        // while (! done)
+        // {
+        //     Console.Write("Are we done (y/n)? ");
+        //     done = Console.ReadLine() == "y";
+        // }
+
+        // DO WHILE
+        bool done;
+        do
         {
             Console.Write("Are we done (y/n)? ");
             done = Console.ReadLine() == "y";
-        }
+        } while (! done);
+
 
         //FOR LOOPS
 
