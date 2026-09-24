@@ -40,7 +40,7 @@ class Program
 
 
         //FOR LOOPS
-        for(int i = 0; i < 10; i++)
+        for(int i = 100000; i > -100000; i-=10000)
         {
             Console.WriteLine(i);
         }
