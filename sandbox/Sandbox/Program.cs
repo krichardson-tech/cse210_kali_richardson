@@ -2,8 +2,29 @@ using System;
 
 class Program
 {
+    //FUNCTIONS
+    static double AddNumbers(double x, int y)
+    {
+        return x + y;
+    }
+
+    static string MyName()
+    {
+        return "Bob";
+    }
+
+    static void DisplayGreeting(string name)
+    {
+        Console.WriteLine($"Welcome {name}, it's nice to meet you.");
+    }
+
     static void Main(string[] args)
     {
+        string myName = MyName();
+        DisplayGreeting(myName);
+        double total = AddNumbers(12.234,20);
+        Console.WriteLine(total);
+
         //IF, ELSE & ELSE IF
         // int x = 10;
         // int y = 30;
@@ -46,15 +67,13 @@ class Program
         // }
 
         //LISTS LIST<int> = NEW LIST<INT>()
-        List<string> myFriends = new List<string> {"Bob", "Betty", "Bubba"};
+        // List<string> myFriends = new List<string> {"Bob", "Betty", "Bubba"};
 
-        myFriends.Add("Doug");
+        // myFriends.Add("Doug");
 
-        foreach(string friend in myFriends)
-        {
-            Console.WriteLine(friend);
-        }
-
-        //FUNCTIONS
+        // foreach(string friend in myFriends)
+        // {
+        //     Console.WriteLine(friend);
+        // }
     }
 }
