@@ -5,12 +5,13 @@ class Program
     static void Main(string[] args)
     {
         Menu myMenu = new Menu();
-        Console.WriteLine("test");
 
         int response = 0;
 
         while(response !=5)
         {
+            response = myMenu.ProcessMenu();
+            
             switch(response)
             {
                 case 1:
