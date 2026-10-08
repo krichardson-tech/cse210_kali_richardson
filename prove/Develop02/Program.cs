@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Menu myMenu = new Menu();
+        Journal myJournal = new Journal();
 
         int response = 0;
 
@@ -14,20 +15,20 @@ class Program
             switch(response)
             {
                 case 1:
-                // call CreateJournalEntry()
+                    myJournal.CreateEntry();
                     Console.WriteLine("Create");
                     break;
                 case 2:
+                    myJournal.DisplayJournal();
                     Console.WriteLine("Display");
-                // call DisplayJournal()
                     break;
                 case 3:
-                    Console.WriteLine("Save");
                 // call readToFile()
+                    Console.WriteLine("Save");
                     break;
                 case 4:
-                    Console.WriteLine("Write");
                 // call WriteToFile()
+                    Console.WriteLine("Write");
                     break;            
             }
         }

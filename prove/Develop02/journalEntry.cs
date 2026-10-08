@@ -12,8 +12,16 @@ class JournalEntry
 
     public void CreateJournalEntry()
     {
+        string [] prompts =
+        {
+            "How was your day?",
+            "Talk about someone you met.",
+            "What is something unique about today?",
+            "How have you helped someone toaday?",
+            "What is something you liked about today?",
+        };
         _date = DateTime.Now.ToString();
-        _prompt = "How was your day? "; //come back to later to make a list that will be randomly selected
+        _prompt = prompts[0]; // use random selector
         Console.Write($"{_prompt}: ");
         _response = Console.ReadLine();
     }
