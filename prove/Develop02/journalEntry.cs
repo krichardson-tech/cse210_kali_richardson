@@ -19,9 +19,12 @@ class JournalEntry
             "What is something unique about today?",
             "How have you helped someone toaday?",
             "What is something you liked about today?",
+            "Talk about one thing you'll do better or differently tomorrow."
         };
         _date = DateTime.Now.ToString();
-        _prompt = prompts[0]; // use random selector
+        Random promptGenerator = new Random();
+        int index = promptGenerator.Next(0, prompts.Length); 
+        _prompt = prompts[index];
         Console.Write($"{_prompt}: ");
         _response = Console.ReadLine();
     }
