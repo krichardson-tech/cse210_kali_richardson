@@ -1,4 +1,4 @@
-class CreateJournalEntry
+class JournalEntry
 {
     public string _date;
     public string _prompt; 
@@ -10,7 +10,7 @@ class CreateJournalEntry
         Console.WriteLine($"{_response}");
     }
 
-    public void CreateEntry()
+    public void CreateJournalEntry()
     {
         _date = DateTime.Now.ToString();
         _prompt = "How was your day? "; //come back to later to make a list that will be randomly selected
