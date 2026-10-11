@@ -2,13 +2,14 @@ class Menu
 {
     public int ProcessMenu()
     {
-        Console.WriteLine("In the menu class");
+        // Console.WriteLine("In the menu class");
 
         int input = 0;
         while (input < 1 || input > 5)
         {
+            Console.WriteLine("~~~~~~");
             Console.WriteLine("Welcome to the Journal Program.");
-            Console.WriteLine("Create, Display, Save, or Read Journal Entries.");
+            Console.WriteLine("Create, Display, Save, or Read Journal Entries.\n");
             Console.WriteLine("1. Create new journal entry.");
             Console.WriteLine("2. Display all journal entries.");
             Console.WriteLine("3. Save journal to a file.");
@@ -16,6 +17,7 @@ class Menu
             Console.WriteLine("5. Quit");
             Console.Write("> ");
             input = int.Parse(Console.ReadLine());
+            Console.WriteLine("~~~~~~");
         }
         return input;
     }

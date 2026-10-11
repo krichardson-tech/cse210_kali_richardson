@@ -16,21 +16,33 @@ class Program
             {
                 case 1:
                     myJournal.CreateEntry();
-                    Console.WriteLine("Create");
+                    Console.WriteLine("Your journal entry has been created.");
                     break;
                 case 2:
                     myJournal.DisplayJournal();
-                    Console.WriteLine("Display");
+                    Console.WriteLine("Your journal entries have been displayed.");
                     break;
                 case 3:
-                // call readToFile()
-                    Console.WriteLine("Save");
+                    Console.Write("Enter the filename: ");
+                    string saveFilename = Console.ReadLine();
+
+                    myJournal.SaveToFile(saveFilename);
+
+                    Console.WriteLine("Your journal entry has been saved.");
                     break;
-                case 4:
-                // call WriteToFile()
-                    Console.WriteLine("Write");
-                    break;            
+                case 4:          
+                    Console.Write("Enter the filename: ");
+                    string loadFilename = Console.ReadLine();
+
+                    myJournal.LoadFromFile(loadFilename);
+
+                    Console.WriteLine("Your journal entry has been loaded.");
+                    break;
             }
         }
     }
 }
+
+
+
+
