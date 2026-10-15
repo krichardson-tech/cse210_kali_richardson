@@ -12,6 +12,11 @@ class Circle
         SetRadius(radius);
     }
 
+    public Circle(int radius) //constructor (non-default)
+    {
+        SetRadius(radius);
+    }
+
     public double GetArea() // method = GetArea
     {
         return 3.14159 * _radius * _radius;
