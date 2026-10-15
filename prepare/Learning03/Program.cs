@@ -1,9 +1,38 @@
 using System;
+using System.Security.Cryptography;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning03 World!");
+        Fraction fraction1 = new Fraction();
+        Console.WriteLine(fraction1.GetFractionString());
+        Console.WriteLine(fraction1.GetDeciamlValue());
+
+        Fraction fraction2 = new Fraction(5);
+        Console.WriteLine(fraction2.GetFractionString());
+        Console.WriteLine(fraction2.GetDeciamlValue());
+
+        Fraction fraction3 = new Fraction(3,4);
+        Console.WriteLine(fraction3.GetFractionString());
+        Console.WriteLine(fraction3.GetDeciamlValue());
+
+        Fraction fraction4 = new Fraction(1,3);
+        Console.WriteLine(fraction4.GetFractionString());
+        Console.WriteLine(fraction4.GetDeciamlValue());
+
+        Random randomNumber = new Random();
+        Fraction fraction5 = new Fraction();
+        for (int i = 0; i < 20; i++)
+        {
+            int numerator = randomNumber.Next(1,11);
+            int denominator = randomNumber.Next(1,11);
+            fraction5.setTopNumber(numerator);
+            fraction5.setBottomNumber(denominator);
+            Console.Write($"Fraction {i + 1}: ");
+            Console.Write($"String: {fraction5.GetFractionString()} ");
+            Console.WriteLine($"Number: {fraction5.GetDeciamlValue()} ");
+        }
+
     }
 }
