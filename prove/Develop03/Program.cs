@@ -8,6 +8,7 @@ class Program
 
         myWord.Display();
         myWord.Hide();
+        Console.WriteLine();
         myWord.Display();
     }
 }
