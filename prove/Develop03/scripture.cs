@@ -19,7 +19,7 @@ class Scripture
 
     public void showScripture() //method
     {
-        Console.WriteLine($"{_reference.getScriptureReference}");
+        Console.WriteLine(_reference.getScriptureReference());
 
         foreach(Word word in _words)
         {
