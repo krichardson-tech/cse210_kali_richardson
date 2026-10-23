@@ -26,7 +26,7 @@ class ScriptureReference
         _endVerse = endVerse;
     }
 
-    public string getScriptureReference() //method
+    public string GetScriptureReference() //method
     {
         if(_endVerse == 0)
         {
@@ -43,11 +43,11 @@ class ScriptureReference
     {
         if(_endVerse == 0)
         {
-            Console.WriteLine($"{getScriptureReference}");
+            Console.WriteLine($"{GetScriptureReference}");
         }
         else
         {
-            Console.WriteLine($"{getScriptureReference}");
+            Console.WriteLine($"{GetScriptureReference}");
         }
     }
 }
