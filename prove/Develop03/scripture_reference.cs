@@ -9,14 +9,13 @@ class ScriptureReference
     private int _verse;
     private int _startVerse;
     private int _endVerse;
-    private string _getScriptureReference;
 
 
     public ScriptureReference(string book_name, int chapter, int verse) //constructor
     {
         _bookName = book_name;
         _chapter = chapter;
-        _endVerse = verse;
+        _verse = verse;
     }
 
     public ScriptureReference(string book_name, int chapter, int startVerse, int endVerse) //constructor
