@@ -10,8 +10,9 @@ class WritingAssignment : Assignment
     public string GetWritingInformation()
     {
         string studentName = GetStudentName();
+        string summary = GetSummary();
         
-        return $"{_title} by {studentName}";
+        return $"{summary} \n{_title} by {studentName}";
     }
 
 }
