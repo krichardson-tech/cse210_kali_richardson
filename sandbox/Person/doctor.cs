@@ -9,7 +9,7 @@ class Doctor : Person
 
     public string GetDoctorInformation()
     {
-        return $"Tools: {_tools}: {GetPersonInformation()}";
+        return $"Doctor Tools: {_tools}: {GetPersonInformation()}";
     }
 
 }
