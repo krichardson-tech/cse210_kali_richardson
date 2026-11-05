@@ -1,12 +1,31 @@
 class BaseActivity
 {
+    private string _activityName;
+    private string _description;
     private int _duration;
     private DateTime _endTime;
 
-    public BaseActivity()
+    private void ObtainDuration()
+    {
+        
+    }
+
+    public BaseActivity(string activityName, string description, int duration)
     {
         // COMPLETE
+        _activityName = activityName;
+        _description = description;
         _duration = 30; //replace with call to obtainDuration
+    }
+
+    public void StartActivity()
+    {
+        //COMPLETE
+    }
+
+    public void DisplayEnding()
+    {
+        //COMPLETE
     }
 
     public void StartTimer()
@@ -19,6 +38,10 @@ class BaseActivity
         return DateTime.Now > _endTime;
     }
 
+    // public string GetPromptString(List<FlaggedString>)
+    // {
+        
+    // }
 
     public void RunCountDownMessage(string message, int seconds)
     {

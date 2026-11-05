@@ -1,8 +1,9 @@
 class BreathingActivity : BaseActivity
 {
-    public BreathingActivity(): base()
+    public BreathingActivity(string activityName, string description): base(activityName, description)
     {
-        
+        _activityName = activityName;
+        _description = description;
     }
     
     public void RunActivity()
