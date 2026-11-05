@@ -31,7 +31,44 @@ class BaseActivity
             Console.Write("x");
             Thread.Sleep(200);
             Console.Write("\b");
+
         }
+
+        Console.Clear();
+       
+        Console.Write($"{message} ");
+        string spinnerAnimation = "-\\|/";
+        int index = 0;
+        for (int i=0; i<20; i++)
+        {
+            Console.Write($"{spinnerAnimation[index++ % spinnerAnimation.Length]}");
+            Console.Write("\b");
+            Thread.Sleep(300);
+        }
+        Console.Clear();
+
+        Console.Write($"{message} ");
+        string fishAnimation = "><))))o>";
+        for (int i=0; i<20; i++)
+        {
+            Console.Write($" {fishAnimation}");
+            Console.Write("\b\b\b\b\b\b\b\b");
+            Thread.Sleep(300);
+        }
+        Console.Clear();
+
+        Console.Write($"{message} ");
+        string faceAnimation = "(^_^)(-_-)";
+        for (int i=0; i<20; i++)
+        {
+            Console.Write($"{faceAnimation[0..5]}");
+            Thread.Sleep(300);
+            Console.Write("\b\b\b\b\b");
+            Console.Write($"{faceAnimation[5..]}");
+            Thread.Sleep(300);
+            Console.Write("\b\b\b\b\b");
+        }
+
         Console.CursorVisible = true;
     }
 
