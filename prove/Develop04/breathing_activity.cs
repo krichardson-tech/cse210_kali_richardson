@@ -1,12 +1,18 @@
 class BreathingActivity : BaseActivity
 {
+    public BreathingActivity(): base()
+    {
+        
+    }
+    
     public void RunActivity()
     {
         // call startActivity() method
-
         RunCountDownMessage("Get Ready", 5);
-        DateTime endTime = DateTime.Now.AddSeconds(40);
-        while(DateTime.Now < endTime)
+        StartTimer();
+        // DateTime endTime = DateTime.Now.AddSeconds(20); 
+        // while(DateTime.Now < endTime) 
+        while(! HasTimerExpired()) 
         {
             RunCountDownMessage("Breath In", 4);
             RunCountDownMessage("Hold", 4);
