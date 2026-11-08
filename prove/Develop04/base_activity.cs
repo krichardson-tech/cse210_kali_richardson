@@ -5,27 +5,41 @@ class BaseActivity
     private int _duration;
     private DateTime _endTime;
 
-    private void ObtainDuration()
+    private int ObtainDuration()
     {
-        
+        Console.Write("Enter the session length you'd like (in seconds): ");
+        string length = Console.ReadLine();
+
+        int seconds = int.Parse(length);
+        return seconds;
     }
 
-    public BaseActivity(string activityName, string description, int duration)
+    public BaseActivity(string activityName, string description)
     {
-        // COMPLETE
         _activityName = activityName;
         _description = description;
-        _duration = 30; //replace with call to obtainDuration
+        _duration = ObtainDuration(); 
     }
 
     public void StartActivity()
     {
-        //COMPLETE
+        Console.Clear();
+
+        Console.WriteLine($"Welcome to the {_activityName} activity.");
+        Console.WriteLine(_description);
+
+        _duration = ObtainDuration();
+
+        RunSpinnerMessage("Get Ready...", 3);
+
+        StartTimer();
     }
 
     public void DisplayEnding()
     {
-        //COMPLETE
+        Console.WriteLine("Congrats!");
+        RunSpinnerMessage("You have completed the activity.", 3);
+        Console.WriteLine($"You did {_duration} seconds of the activity.");
     }
 
     public void StartTimer()
@@ -38,10 +52,10 @@ class BaseActivity
         return DateTime.Now > _endTime;
     }
 
-    // public string GetPromptString(List<FlaggedString>)
-    // {
+    public string GetPromptString(List<FlaggedString>)
+    {
         
-    // }
+    }
 
     public void RunCountDownMessage(string message, int seconds)
     {
@@ -60,40 +74,38 @@ class BaseActivity
         Console.CursorVisible = false;
         // DateTime now = DateTime.Now;
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
-        // for(int i = 0; i < seconds; i++)
-        while(DateTime.Now < endTime)
-        {
-            Console.Write("+");
-            Thread.Sleep(200);
-            Console.Write("\b"); // \b moves the curser back one space
-            Console.Write("x");
-            Thread.Sleep(200);
-            Console.Write("\b");
+        // while(DateTime.Now < endTime)
+        // {
+        //     Console.Write("+");
+        //     Thread.Sleep(200);
+        //     Console.Write("\b"); // \b moves the curser back one space
+        //     Console.Write("x");
+        //     Thread.Sleep(200);
+        //     Console.Write("\b");
 
-        }
-
-        Console.Clear();
+        // }
+        // Console.Clear();
        
-        Console.Write($"{message} ");
-        string spinnerAnimation = "-\\|/";
-        int index = 0;
-        for (int i=0; i<20; i++)
-        {
-            Console.Write($"{spinnerAnimation[index++ % spinnerAnimation.Length]}");
-            Console.Write("\b");
-            Thread.Sleep(300);
-        }
-        Console.Clear();
+        // Console.Write($"{message} ");
+        // string spinnerAnimation = "-\\|/";
+        // int index = 0;
+        // for (int i=0; i<20; i++)
+        // {
+        //     Console.Write($"{spinnerAnimation[index++ % spinnerAnimation.Length]}");
+        //     Console.Write("\b");
+        //     Thread.Sleep(300);
+        // }
+        // Console.Clear();
 
-        Console.Write($"{message} ");
-        string fishAnimation = "><))))o>";
-        for (int i=0; i<20; i++)
-        {
-            Console.Write($" {fishAnimation}");
-            Console.Write("\b\b\b\b\b\b\b\b");
-            Thread.Sleep(300);
-        }
-        Console.Clear();
+        // Console.Write($"{message} ");
+        // string fishAnimation = "><))))o>";
+        // for (int i=0; i<20; i++)
+        // {
+        //     Console.Write($" {fishAnimation}");
+        //     Console.Write("\b\b\b\b\b\b\b\b");
+        //     Thread.Sleep(300);
+        // }
+        // Console.Clear();
 
         Console.Write($"{message} ");
         string faceAnimation = "(^_^)(-_-)";
