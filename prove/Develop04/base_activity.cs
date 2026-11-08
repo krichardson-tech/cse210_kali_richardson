@@ -18,7 +18,6 @@ class BaseActivity
     {
         _activityName = activityName;
         _description = description;
-        _duration = ObtainDuration(); 
     }
 
     public void StartActivity()
@@ -52,9 +51,43 @@ class BaseActivity
         return DateTime.Now > _endTime;
     }
 
-    public string GetPromptString(List<FlaggedString>)
+    protected FlaggedString GetPromptString(List<FlaggedString> prompts)
     {
-        
+        bool allUsed = true;
+
+        foreach (FlaggedString prompt in prompts)
+        {
+            if (!prompt.GetHasBeenUsed())
+            {
+                allUsed = false;
+                break;
+            }
+        }
+
+        if (allUsed)
+        {
+            ResetPromptsUsage(prompts);
+        }
+
+        Random random = new Random();
+        FlaggedString selectedPrompt;
+
+        do
+        {
+            int index = random.Next(prompts.Count);
+            selectedPrompt = prompts[index];
+        }
+        while (selectedPrompt.GetHasBeenUsed());
+
+        return selectedPrompt;
+    }
+
+    protected void ResetPromptsUsage(List<FlaggedString> prompts)
+    {
+        foreach (FlaggedString prompt in prompts)
+        {
+            prompt.ResetHasBeenUsed();
+        }
     }
 
     public void RunCountDownMessage(string message, int seconds)
