@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
+
 class BaseActivity
 {
     private string _activityName;
@@ -132,7 +136,7 @@ class BaseActivity
 
         // Console.Write($"{message} ");
         // string fishAnimation = "><))))o>";
-        // for (int i=0; i<20; i++)
+        // while(DateTime.Now < endTime)
         // {
         //     Console.Write($" {fishAnimation}");
         //     Console.Write("\b\b\b\b\b\b\b\b");
@@ -142,7 +146,7 @@ class BaseActivity
 
         Console.Write($"{message} ");
         string faceAnimation = "(^_^)(-_-)";
-        for (int i=0; i<20; i++)
+        while(DateTime.Now < endTime)
         {
             Console.Write($"{faceAnimation[0..5]}");
             Thread.Sleep(300);

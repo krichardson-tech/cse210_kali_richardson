@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 class ReflectionActivity : BaseActivity
 {
     private List<FlaggedString> _prompts;
