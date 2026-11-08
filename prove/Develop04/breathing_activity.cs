@@ -2,17 +2,12 @@ class BreathingActivity : BaseActivity
 {
     public BreathingActivity(string activityName, string description): base(activityName, description)
     {
-        _activityName = activityName;
-        _description = description;
     }
     
     public void RunActivity()
     {
-        // call startActivity() method
-        RunCountDownMessage("Get Ready", 5);
-        StartTimer();
-        // DateTime endTime = DateTime.Now.AddSeconds(20); 
-        // while(DateTime.Now < endTime) 
+        StartActivity();
+
         while(! HasTimerExpired()) 
         {
             RunCountDownMessage("Breath In", 4);
@@ -21,8 +16,7 @@ class BreathingActivity : BaseActivity
             RunCountDownMessage("Hold", 4);
         }
 
-        // call endActivity()
-
+        DisplayEnding();
         
     }
 }
