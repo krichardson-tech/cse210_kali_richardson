@@ -13,13 +13,13 @@ class Program
         //         Console.WriteLine(p.GetPoliceInformation());
         //     }
         // else
-        //     {
-                Console.WriteLine(person.GetPersonInformation());
+        Console.Write($"Salary: {person.GetSalary()} - ");
+        Console.WriteLine(person.GetPersonInformation());
         //     }
     }
     static void Main(string[] args)
     {
-        Person myPerson = new Person("John", "Revelator", 50, 180.0);
+        // Person myPerson = new Person("John", "Revelator", 50, 180.0);
         // Console.WriteLine(myPerson.GetPersonInformation());
 
         Doctor myDoctor = new Doctor("Bob", "Payne", 45, 279, "Scalpel");
@@ -32,7 +32,7 @@ class Program
 
         List<Person> myPeople = new List<Person>();
 
-        myPeople.Add(myPerson);
+        // myPeople.Add(myPerson);
         myPeople.Add(myDoctor);
         myPeople.Add(myPolice);
 
