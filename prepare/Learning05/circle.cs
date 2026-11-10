@@ -11,4 +11,9 @@ class Circle : Shape
     {
         return 3.14159 * _radius * _radius;
     }
+
+    public override string GetShapeName()
+    {
+        return "circle";
+    }
 }

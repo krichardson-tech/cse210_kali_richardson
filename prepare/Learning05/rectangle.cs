@@ -13,4 +13,9 @@ class Rectangle : Shape
     {
         return _length * _width;
     }
+
+    public override string GetShapeName()
+    {
+        return "rectangle";
+    }
 }

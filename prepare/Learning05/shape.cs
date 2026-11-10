@@ -22,4 +22,9 @@ class Shape
     {
         return 0;
     }
+
+    public virtual string GetShapeName()
+    {
+        return "shape";
+    }
 }
