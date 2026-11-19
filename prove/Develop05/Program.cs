@@ -4,7 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        BaseGoal myGoal = new BaseGoal();
+        // be sure to add the current point amount above the menu cause i didnt put it with the menu
+        
+        BaseGoal myGoal = new BaseGoal("BaseGoal");
         Console.WriteLine(myGoal.GetConsoleString());
     }
 }
