@@ -6,7 +6,12 @@ class Program
     {
         // be sure to add the current point amount above the menu cause i didnt put it with the menu
         
-        BaseGoal myGoal = new BaseGoal("BaseGoal");
-        Console.WriteLine(myGoal.GetConsoleString());
+        // BaseGoal myGoal = new BaseGoal("BaseGoal");
+        // Console.WriteLine(myGoal.GetConsoleString());
+
+        SimpleGoal mySimpleGoal = new SimpleGoal();
+        Console.WriteLine(mySimpleGoal.GetConsoleString());
+        mySimpleGoal.MarkComplete();
+        Console.WriteLine(mySimpleGoal.GetConsoleString());
     }
 }
